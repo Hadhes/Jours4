@@ -1,7 +1,8 @@
+// Compte le nombre de paragraphe
 let messagesCount = $("p").length;
 $("#count").text(messagesCount);
 
-
+// Supression quand clic png Poubelle
  $('body').on("click", '.trash',
     function(){
         console.log("click");
@@ -12,6 +13,7 @@ $("#count").text(messagesCount);
  }
  );
 
+// Affichage d'un nouveau message
  $('#btn-add').click(
      function(){
         console.log("click détecté !");
@@ -25,7 +27,8 @@ $("#count").text(messagesCount);
         <img class="trash" src="trash.png">
         </div>
         `);
-
+        
+        // Remise à zero du texte
         $("#add-message").val("");
 
         let messagesCount = $("p").length;
@@ -33,6 +36,7 @@ $("#count").text(messagesCount);
  }  
  );
 
+ // Action de recherche par rapport aux messages
  $('#btn-butt').click(
     function(){
       console.log("click détecté !");
