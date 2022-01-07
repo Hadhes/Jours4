@@ -36,12 +36,13 @@ $("#count").text(messagesCount);
  $('#btn-butt').click(
     function(){
       console.log("click détecté !");
-      let textRecherche = $('#add-recherche').val();
+      let textRecherche = $('#add-recherche').val().toLowerCase();
       //console.log(textRecherche);
 
       $('h6').each(function(){
         //console.log($(this).text());
-        if ($(this).text() === textRecherche) {
+        let textCompar = $(this).text().toLowerCase();
+        if (textCompar.includes(textRecherche) === true) {
             $(this).parent().parent().show();
             console.log("yes");
         } else {
